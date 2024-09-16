@@ -1,0 +1,177 @@
+/* General */
+:root {
+  --mainBlack: black;
+  --mainOrange:#FF782D;
+  --mainGray: #555555;
+  --mainMrgin: 40px
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* General */
+
+/* Nav Bar Main */
+.main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.main .logo{
+  display: flex;
+  align-items: center;
+}
+
+.main .logo p{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main .logo img{
+  width: 100px;
+}
+
+
+.main .menu ul{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main .menu ul li a.page{
+  position: relative;
+}
+
+.main .menu ul li a.page::after {
+  content: '';
+  border-width: 0px 2px 2px 0px;
+  border-color: black;
+  border-style: solid;
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  transform: rotate(45deg);
+  left: 35px;
+  top: 6px;
+
+
+}
+
+.main .menu ul li a, .action ul li a{
+  color: var(--mainBlack);
+}
+
+.main .action ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main .action ul li a i{
+  color: var(--mainOrange);
+  border: 1px solid var(--mainOrange);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+
+/* Nav Bar Main */
+
+/* Image Layout Main */
+
+.image-main {
+  background: url('./images/Image.png');
+  width: 100%;
+  height: 650px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: var(--mainMrgin);
+}
+
+.image-main .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  padding-right: 700px;
+  height: 100%;
+}
+
+.image-main .content h1{
+  font-size: 40px;
+}
+
+.image-main .content p {
+  color: var(--mainGray);
+}
+
+.image-main .content button {
+  padding: 10px 20px;
+  background-color: var(--mainOrange);
+  border-radius: 20px;
+  border: none;
+  color: white;
+}
+
+/* Image Layout Main */
+
+
+/* Layout Grid */
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mainMrgin);
+  align-items: center;
+}
+
+.title .text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title button{
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid var(--mainGray);
+}
+
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 200px 200px;
+  gap: 20px;
+  margin-bottom: var(--mainMrgin);
+}
+
+.main-grid .cart {
+  border: 1px solid var(--mainGray);
+  border-radius: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.main-grid .cart:hover {
+  transform: translateY(-20px);
+}
+/* Layout Grid */
+
+
+
